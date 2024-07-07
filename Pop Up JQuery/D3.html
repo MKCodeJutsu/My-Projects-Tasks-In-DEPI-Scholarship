@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Youm7</title>
+          <link rel="stylesheet" href="style.css">
+          <style>
+            /* Add some basic styling for the popup */
+            #welcome-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000; /* Black background */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            display: none; /* Hide the popup by default */
+            width: 500px; /* Make the popup wider */
+            height: 300px; /* Make the popup taller */
+        }
+        #welcome-popup h2 {
+            color: #ff0000; /* Red text */
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        #welcome-popup p {
+            color: #fff; /* White text */
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        #welcome-popup .button {
+            background-color: #ff0000; /* Red button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #welcome-popup .button:hover {
+            background-color: #cc0000; /* Darker red on hover */
+        }
+        </style>
+</head>
+<body>
+          <div id="main">
+
+                    <div id="top"><img src="youm7.webp" alt=""><img class="ad" src="ad.webp" alt=""> <div id="date"> 27/5/2024 
+                    </div>
+                              
+                    </div>
+                    <div id="top2"></div>
+                    <div id="header">
+                              <img id="logo" src="youm7.webp" alt="youm7 logo">
+                              <input type="text" id="search_box" placeholder=" search ">
+                    </div>
+                    <div id="nav">
+                              <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                              </ul>
+                    </div>
+                    <div id="content">
+                              <ul>
+                                        <li><a href="#"></a>Home Page</li>
+                                        <li>Home Page</li>
+                                        <li>Home Page</li>
+                                        <li>Home Page</li>
+                                        <li>Home Page</li>
+                              </ul>
+                    </div>
+                    <div id="footer">
+                              <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                              </ul>
+
+
+
+
+                    </div>
+          </div>
+   <!-- Add the welcome popup HTML -->
+   <div id="welcome-popup">
+    <h2>Welcome to Our Website!</h2>
+    <p>We're glad you're here! Take a look for the latest news !.</p>
+    <button class="button">Get Started</button>
+</div>
+
+<!-- Add the jQuery script -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Show the welcome popup
+        $('#welcome-popup').fadeIn(500);
+
+        // Automatically close the popup after 5 seconds
+        setTimeout(function() {
+            $('#welcome-popup').fadeOut(500);
+        }, 5000);
+
+        // Add an event listener to the Get Started button
+        $('button').on('click', function() {
+            // Close the popup when the button is clicked
+            $('#welcome-popup').fadeOut(500);
+        });
+    });
+</script>
+  </script>
+</body>
+</html>

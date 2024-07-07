@@ -1,0 +1,61 @@
+body {
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background: radial-gradient(circle, #a1abbd, #000000);          font-family: 'Courier New', Courier, monospace;
+          color: #fff;
+      }
+      
+      .clock-container {
+          text-align: center;
+      }
+      
+      .clock {
+          background: rgba(0, 0, 0, 0.7);
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+      }
+      
+      .time {
+          font-size: 4rem;
+          margin-bottom: 10px;
+      }
+      
+      .date {
+          font-size: 1.5rem;
+          letter-spacing: 2px;
+      }
+/* Add to styles.css */
+@keyframes colorChange {
+          0% { color: #ff4757; }
+          25% { color: #1e90ff; }
+          50% { color: #2ed573; }
+          75% { color: #ff6348; }
+          100% { color: #ffa502; }
+      }
+      
+      .time {
+          font-size: 4rem;
+          margin-bottom: 10px;
+          animation: colorChange 8s infinite;
+          -webkit-animation: colorChange 8s infinite;
+}
+      
+      .date {
+          font-size: 1.5rem;
+          letter-spacing: 2px;
+          animation: colorChange 10s infinite;
+          -webkit-animation: colorChange 10s infinite;
+}
+/* Add to styles.css */
+.clock {
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.2);
+      }
+      
+      .time, .date {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+      }
+                  

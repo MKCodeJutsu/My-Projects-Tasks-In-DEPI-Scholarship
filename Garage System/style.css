@@ -1,0 +1,51 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.bg-gradient {
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    height: 100vh;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success:hover {
+    background-color: #34c759;
+    border-color: #34c759;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.table-striped {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.table-striped thead th {
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #ddd;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.animated {
+    animation-duration: 1s;
+}
