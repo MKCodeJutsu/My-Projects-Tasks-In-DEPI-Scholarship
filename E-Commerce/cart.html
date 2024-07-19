@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Include Styles and Scripts -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">iShop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product-listing.html">Products</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Items -->
+    <div class="container mt-5">
+        <h3>Shopping Cart</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <div id="cart-items"></div>
+            </div>
+            <div class="col-md-4">
+                <h4>Total: $<span id="total-price">0.00</span></h4>
+                <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 iShop. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Load cart items from localStorage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartContainer = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+
+    function updateCart() {
+        cartContainer.innerHTML = ''; // Clear the container before adding new content
+        let total = 0;
+        if (cartItems.length > 0) { // Check if the array is not empty
+            cartItems.forEach(item => {
+                const cartItemHTML = `
+                    <div class="card mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="https://via.placeholder.com/100x100" class="card-img" alt="${item.name}">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">${item.name}</h5>
+                                    <p class="card-text">$${item.price}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                cartContainer.innerHTML += cartItemHTML; // Append the HTML to the container
+                total += parseFloat(item.price);
+            });
+        } else {
+            cartContainer.innerHTML = '<p>Your cart is empty.</p>'; // Display a message if the cart is empty
+        }
+        totalPriceElement.textContent = total.toFixed(2); // Update the total price
+    }
+
+    updateCart();
+    // Function to display cart items
+  function displayCart() {
+    var cart = JSON.parse(localStorage.getItem("cart")) || [];
+    var cartItemsHTML = "";
+
+    for (var i = 0; i < cart.length; i++) {
+      cartItemsHTML += `
+        <div class="cart-item">
+          <img src="${cart[i].image}" alt="${cart[i].name}">
+          <h5 class="cart-item-name">${cart[i].name}</h5>
+          <p class="cart-item-price">${cart[i].price}</p>
+        </div>
+      `;
+    }
+
+    document.querySelector(".cart-items").innerHTML = cartItemsHTML;
+  }
+
+  displayCart();
+    </script>
+</body>
+</html>
