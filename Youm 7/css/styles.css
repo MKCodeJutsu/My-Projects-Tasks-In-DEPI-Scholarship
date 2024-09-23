@@ -1,0 +1,32 @@
+body {
+  background-image: url(/images/bg.png);
+  background-repeat: repeat-x;
+  background-color: #c31e1e;
+  height: 2000px;
+  direction: rtl;
+}
+
+.top1 {
+  height: 53px;
+}
+
+.top2 {
+  height:  53px;
+
+}
+.nav-link {
+  color: #fff;
+  margin-top: 3px;
+  transition: 1s;
+}
+.heading {
+  height: 138px;
+
+}
+.nav {
+  height: 47px;
+}
+
+.content {
+  height: 1000PX;
+}

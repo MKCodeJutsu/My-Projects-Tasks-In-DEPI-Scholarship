@@ -1,10 +1,10 @@
 :root {
-	--hue: 223;
-	--bg: hsl(var(--hue),10%,100%);
-	--fg: hsl(var(--hue),10%,0%);
-	--primary: hsl(var(--hue),90%,55%);
-	--primaryT: hsla(var(--hue),90%,55%,0);
-	--transDur: 0.3s;
+  --hue: 223;
+  --bg: hsl(var(--hue), 10%, 100%);
+  --fg: hsl(var(--hue), 10%, 0%);
+  --primary: hsl(var(--hue), 90%, 55%);
+  --primaryT: hsla(var(--hue), 90%, 55%, 0);
+  --transDur: 0.3s;
 }
 html {
   scroll-behavior: smooth;
@@ -18,12 +18,11 @@ body {
 
 /* Navbar Styling */
 .navbar {
-  background-color: #8BC34A; /* Light green background*/
+  background-color: #8bc34a; /* Light green background*/
   padding: 1rem 2rem; /* Add some padding to the navbar*/
   border-bottom: 1px solid #b3e6b3; /* Add a light green border*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow*/
 }
-
 
 .navbar-brand {
   transition: transform 0.3s ease-in-out; /* Add transition effect */
@@ -43,12 +42,10 @@ body {
   transform: translateX(10px); /* Move the text 10px to the right on hover */
 }
 
-
 /* Animated underline effect on navbar links */
 .navbar-nav .nav-link {
   position: relative;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .navbar-nav .nav-link::after {
@@ -58,7 +55,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #8BC34A;
+  background-color: #8bc34a;
   transition: width 0.3s ease-in-out;
 }
 
@@ -73,19 +70,19 @@ body {
 
 .navbar-brand:hover {
   transform: scale(1.1);
-  color: #8BC34A;
+  color: #8bc34a;
 }
 
 .navbar-toggler {
   border: none; /* Remove the default border*/
-  background-color: #8BC34A; /* Light green background for the toggler*/
+  background-color: #8bc34a; /* Light green background for the toggler*/
   padding: 10px; /* Add some padding to the toggler*/
   font-size: 18px; /* Increase font size for better readability*/
   color: #fff; /* White text color for the toggler*/
 }
 
 .navbar-toggler:hover {
-  background-color: #64B53A; /* Darker light green background on hover*/
+  background-color: #64b53a; /* Darker light green background on hover*/
 }
 /* Main Slider Styling */
 .carousel-item img {
@@ -113,7 +110,6 @@ footer {
   padding: 10px 0;
 }
 
-
 .long-search-input {
   width: 400px; /* Adjust width as needed */
   background-color: #f8f9fa; /* Light background color */
@@ -135,7 +131,7 @@ footer {
   top: 10px;
   right: 10px;
   z-index: 1;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
 
 .badge-ribbon {
@@ -150,7 +146,7 @@ footer {
 }
 
 .hover-effect:hover .badge-ribbon {
-  background-color: #34c759; 
+  background-color: #34c759;
   color: #fff;
 }
 .price-box {
@@ -173,12 +169,12 @@ footer {
 }
 .card {
   max-width: auto;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .card:hover {
-  
   border-radius: 10%;
-  filter: drop-shadow(10px 7px 10px Green);
+  filter: drop-shadow(10px 7px 10px rgb(112, 192, 112));
+  transition: 0.5s;
 }
 .btn {
   gap: 20px;
@@ -257,13 +253,13 @@ footer {
 }
 
 .navbar .btn-custom:hover {
-  background-color: #64B53A; /* darker light green color on hover */
-  border-color: #64B53A;
+  background-color: #64b53a; /* darker light green color on hover */
+  border-color: #64b53a;
 }
 
 .navbar .btn-custom:active {
-  background-color: #4CAF50; /* even darker light green color on active */
-  border-color: #4CAF50;
+  background-color: #4caf50; /* even darker light green color on active */
+  border-color: #4caf50;
 }
 
 .navbar .btn-custom:focus {
@@ -337,7 +333,7 @@ Dark Mode */
 }
 
 .toggle-label:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 3px;
@@ -362,7 +358,6 @@ body.dark-mode {
   color: #ffffff;
 }
 
-
 .dark-mode .wrapper {
   /* add dark mode styles for the wrapper element here */
   background-color: #333;
@@ -376,13 +371,14 @@ body.dark-mode {
   align-items: center;
   justify-content: center;
   height: 80px;
-  background-color: #f8f9fa; /* Light background color */
-  border-bottom: 1px solid #b3e6b3; /* Light green border */
-  padding: 20px;
+  background-color: #f8f9fa;
+  /*Lightbackgroundcolor*/border-bottom: 1px solid #b3e6b3;
+  /*Lightgreenborder*/padding: 20px;
   font-size: 24px;
   font-weight: bold;
   color: #333;
-  transition: background-color 0.3s ease-in-out; /* Add transition effect */
+  transition: background-color 0.3s ease-in-out; /*Addtransitioneffect*/
+
 }
 
 .about-header::before {
@@ -398,7 +394,8 @@ body.dark-mode {
 }
 
 .about-header:hover {
-  background-color: #28a745; /* Light green background color on hover */
+  background-color: #28a745; /*Lightgreenbackgroundcoloronhover*/
+  transition: 0.5s;
 }
 
 .about-header:hover::before {
@@ -481,7 +478,6 @@ body.dark-mode {
   }
 }
 
-
 /* Contact Us */
 .contact-header {
   position: relative;
@@ -539,9 +535,8 @@ body.dark-mode {
   transform: scaleX(1);
 }
 
- .hidden  {
+.hidden {
   display: none;
-
 }
 .about-us .container {
   transition: opacity 0.5s; /* add transition effect to opacity */
@@ -550,4 +545,3 @@ body.dark-mode {
 .about-us .container .hidden {
   opacity: 0; /* set opacity to 0 when hidden */
 }
-
